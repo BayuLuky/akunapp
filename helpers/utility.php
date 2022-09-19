@@ -18,37 +18,6 @@ function uniquecode()
     return substr(str_shuffle("0123456789abcdefghijklmnopqrstvwxyz"), 0, 6);
 }
 
-function createSlug($text = '', $divider = '-')
-{
-    $text = preg_replace('~[^\pL\d]+~u', $divider, $text);
-    $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
-    $text = preg_replace('~[^-\w]+~', '', $text);
-    $text = trim($text, $divider);
-    $text = preg_replace('~-+~', $divider, $text);
-    $text = strtolower($text);
-
-    if (empty($text))
-        return time();
-
-    return $text;
-}
-
-function makeSlug($model = null, $name = null)
-{
-    if (!$model)
-        return false;
-
-    if (!$name)
-        return false;
-
-    $name = createSlug($name);
-    $checkExistingSlug = $model->where('slug', $name)->first();
-
-    return ($checkExistingSlug)
-        ? $name . '-' . time()
-        : $name;
-}
-
 function clean($string = null)
 {
     return ($string) ? strip_tags($string) : '';
