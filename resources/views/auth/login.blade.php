@@ -26,13 +26,13 @@ License: For each use you must have a valid license purchased only from above li
     <meta property="og:url" content="https://keenthemes.com/metronic" />
     <meta property="og:site_name" content="Keenthemes | Metronic" />
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+    <link rel="shortcut icon" href={{asset('assets/media/logos/favicon.ico')}} />
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <!--end::Fonts-->
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
-    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link href={{asset('assets/plugins/global/plugins.bundle.css')}}"" rel="stylesheet" type="text/css" />
+    <link href={{asset('assets/css/style.bundle.css')}} rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
 </head>
 <!--end::Head-->
@@ -47,7 +47,7 @@ License: For each use you must have a valid license purchased only from above li
             <div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
                 <!--begin::Logo-->
                 <a href="../../demo1/dist/index.html" class="mb-12">
-                    <img alt="Logo" src="assets/media/logos/logo-1.svg" class="h-40px" />
+                    <img alt="Logo" src={{asset('assets/media/logos/logo-1.svg')}} class="h-40px" />
                 </a>
                 <!--end::Logo-->
                 <!--begin::Wrapper-->
